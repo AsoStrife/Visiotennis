@@ -18,7 +18,7 @@
     "player_2_score": {
       "type": "integer"
     },
-    "match_time": {
+    "match_start_time": {
       "type": "datetime"
     },
     "player_1": {
@@ -27,7 +27,7 @@
       "target": "api::player.player",
       "inversedBy": "games"
     },
-    "players_2": {
+    "player_2": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::player.player",
@@ -38,6 +38,9 @@
       "relation": "manyToOne",
       "target": "api::player.player",
       "inversedBy": "games_won"
+    },
+    "match_end_time": {
+      "type": "datetime"
     }
   }
 }

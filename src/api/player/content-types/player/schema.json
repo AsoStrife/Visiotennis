@@ -24,17 +24,17 @@
       "target": "api::game.game",
       "mappedBy": "player_1"
     },
-    "game": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::game.game",
-      "inversedBy": "players_2"
-    },
     "games_won": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::game.game",
       "mappedBy": "winner"
+    },
+    "game": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::game.game",
+      "inversedBy": "player_2"
     }
   }
 }
