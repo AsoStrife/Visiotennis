@@ -18,7 +18,7 @@
     "player_name": {
       "type": "string"
     },
-    "games": {
+    "games_as_player_1": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::game.game",
@@ -30,11 +30,11 @@
       "target": "api::game.game",
       "mappedBy": "winner"
     },
-    "game": {
+    "games_as_player_2": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::game.game",
-      "inversedBy": "player_2"
+      "mappedBy": "player_2"
     }
   }
 }

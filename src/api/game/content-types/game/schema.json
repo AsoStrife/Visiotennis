@@ -21,17 +21,11 @@
     "match_start_time": {
       "type": "datetime"
     },
-    "player_1": {
+    "player_2": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::player.player",
-      "inversedBy": "games"
-    },
-    "player_2": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::player.player",
-      "mappedBy": "game"
+      "inversedBy": "games_as_player_2"
     },
     "winner": {
       "type": "relation",
@@ -41,6 +35,12 @@
     },
     "match_end_time": {
       "type": "datetime"
+    },
+    "player_1": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::player.player",
+      "inversedBy": "games_as_player_1"
     }
   }
 }
